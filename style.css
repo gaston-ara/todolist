@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: cornflowerblue;
+}
+.input-to-do{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    margin: 20px;
+    background-color: rgb(188, 188, 255);
+    width: 100%;
+}
+.input-to-do input{
+    border: none;
+    padding: 5px;
+    background-color: rgb(240, 240, 240);
+    width: 400px;
+}
+.input-to-do button{
+    border: none;
+    padding: 5px;
+    background-color: rgb(49, 119, 250);
+    color: white;
+    width: 100px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.input-to-do button:hover{
+    background-color: rgb(71, 135, 255);
+}
+.list{
+    width: 80vw;
+    height: 100vh;
+    border: 1px solid rgb(202, 202, 202);
+}
+.item{
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(164, 243, 203);
+    padding: 20px 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin-left: 5px;
+}
+.buttons button{
+    width: 70px;
+    height: 35px;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+#done{
+    background-color: rgb(83, 83, 241);
+}
+#delete{
+    background-color: rgb(207, 60, 60);
+}
+.tarea{
+    width: 1500px;
+    margin: 0 10px;
+}
+.tarea p{
+    font-family: cursive;
+    font-variant: small-caps;
+}
