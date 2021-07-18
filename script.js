@@ -1,14 +1,17 @@
-const Tareas = [];
-window.onload = function() {
-    renderTarea();
-  };
-  //Funcion de onclick para agregar nueva tarea
+// const tareas = [];
+window.onload = function () {
+    validar()
+};
+
+let tareas = [];
+
+//Funcion de onclick para agregar nueva tarea
 function nueva(event) {
     event.preventDefault();
     let inputTarea = document.querySelector("#input-text");
-    Tareas.push(inputTarea.value);
+    tareas.push(inputTarea.value);
     //Se guarda el array de las tareas en localstorage
-    let Storage = JSON.stringify(Tareas);
+    let Storage = JSON.stringify(tareas);
     localStorage.setItem('tarea', Storage);
     //Funcion para renderizar cada tarea nueva
     renderTarea();
@@ -34,5 +37,14 @@ function renderTarea() {
         <button id="delete">Delete</button>
     </div>
 </div>`
+    }
+}
+
+function validar() {
+    try {
+        tareas = JSON.parse(localStorage.getItem('tarea')) || [];
+        renderTarea();
+    }
+    catch (error) {
     }
 }
