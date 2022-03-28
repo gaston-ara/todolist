@@ -16,7 +16,7 @@ const cleanInput = () => {
     input.value = '';
     input.focus();
 }
-const hecho = (e) =>{
+const hecho = (e) => {
     let toDone = e.parentElement.parentElement.id;
     tareas[toDone].done = !tareas[toDone].done;
     renderTask();
@@ -28,7 +28,7 @@ const eliminarTask = (e) => {
     renderTask();
     updateTask();
 }
-const updateTask = () =>{
+const updateTask = () => {
     localStorage.setItem('tareas', JSON.stringify(tareas));
 }
 const renderTask = () => {
@@ -56,7 +56,6 @@ const renderTask = () => {
     </div>`)
         }
     }
-
 }
 const newTask = () => {
     let tarea = {
