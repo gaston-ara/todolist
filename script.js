@@ -62,8 +62,13 @@ const newTask = () => {
         name: input.value,
         done: false
     }
-    tareas.push(tarea);
-    console.log(tareas);
+    if (tarea.name.indexOf("<")) {
+        tareas.push(tarea);
+        console.log(tareas);
+    } else{
+        alert("No se permiten caracteres especiales")
+    }
+    
 }
 window.onload = () => {
     validar();
